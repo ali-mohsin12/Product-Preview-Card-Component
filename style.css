@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+}
+.container {
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+   display: flex;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
+.left-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;    
+
+}
+.left-side,
+.right-side {
+    width: 50%;
+    
+}
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px;
+    background-color: hsl(0, 0%, 100%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    gap: 15px;
+}
+span {
+    color:hsla(228, 12%, 48%, 0.659);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+h1 {
+    font-family: Fraunces, sans-serif;
+    color: hsl(212, 21%, 14%);
+    font-weight: 700;
+}
+p {
+    color: hsla(228, 12%, 48%, 0.762);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.price-section {
+    display: flex;
+}
+.new-price {
+    color: hsl(158, 36%, 37%);
+    font-family:Fraunces, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.old-price {
+    font-family: Fraunces, sans-serif;
+    text-decoration: line-through;
+    color: hsla(228, 12%, 48%, 0.735);
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:15px ;
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color:hsl(158, 36%, 37%);
+    padding: 13px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: all 0.1s ease-in-out;
+}
+button:hover {
+    cursor: pointer;
+    background-color: hsl(158, 30%, 21%);
+}
+#mobile {
+    display: none;
+}
+@media screen and (max-width:610px) {
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #desktop {
+        display: none;
+    }
+    #mobile {
+        display: flex;
+    }
+    span {
+        font-size: 0.6rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 0.7rem;
+    }
+    .new-price {
+        font-size: 1.5rem;
+    }
+    .old-price {
+        font-size: 0.7rem;
+    }
+    .left-side img {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+    .right-side {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+    }
+}
